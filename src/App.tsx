@@ -11,17 +11,15 @@ import './App.css';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0f0a1a] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-background">
       <Navigation />
-      <main>
-        <Hero />
-        <Services />
-        <Packages />
-        <QuoteCalculator />
-        <Gallery />
-        <Testimonials />
-        <Contact />
-      </main>
+      <Hero />
+      <Services />
+      <Packages />
+      <QuoteCalculator />
+      <Gallery />
+      <Testimonials />
+      <Contact />
       <Footer />
     </div>
   );
