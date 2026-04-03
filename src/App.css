@@ -1,0 +1,123 @@
+/* App-specific styles */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(124, 58, 237, 0.3);
+  color: white;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid rgba(124, 58, 237, 0.5);
+  outline-offset: 2px;
+}
+
+/* Custom slider styles */
+[data-slot="slider-track"] {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-slot="slider-range"] {
+  background: linear-gradient(to right, #7c3aed, #a78bfa) !important;
+}
+
+[data-slot="slider-thumb"] {
+  background: #7c3aed !important;
+  border: 2px solid white !important;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5) !important;
+}
+
+/* Date input calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Checkbox custom styles */
+[data-state="checked"] {
+  background-color: #7c3aed !important;
+  border-color: #7c3aed !important;
+}
+
+/* Select dropdown styles */
+[role="listbox"] {
+  background: #1a1225 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[role="option"] {
+  color: white !important;
+}
+
+[role="option"]:hover,
+[role="option"][data-highlighted] {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Dialog overlay */
+[data-state="open"] > [data-slot="dialog-overlay"] {
+  background: rgba(15, 10, 26, 0.9) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Animation utilities */
+.animate-in {
+  animation: animate-in 0.3s ease-out;
+}
+
+@keyframes animate-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  /* Non-WebKit fallback */
+  display: -moz-box;
+  display: box;
+  box-orient: vertical;
+  max-height: 3rem;
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
